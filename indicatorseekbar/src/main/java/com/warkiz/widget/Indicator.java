@@ -253,7 +253,7 @@ public class Indicator {
     /**
      * call this method hide the indicator
      */
-    void hide() {
+    public void hide() {
         if (mIndicatorPopW == null) {
             return;
         }
