@@ -84,6 +84,7 @@
             android:layout_height="wrap_content">
 
             <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/seekBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:isb_progress="30"

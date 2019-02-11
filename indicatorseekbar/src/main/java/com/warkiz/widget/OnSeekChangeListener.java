@@ -35,4 +35,10 @@ public interface OnSeekChangeListener {
      * @param seekBar The SeekBar in which the touch gesture began
      */
     void onStopTrackingTouch(IndicatorSeekBar seekBar);
+
+    /**
+     * Function called when user is dragging seekbar, it contains the current seekbar progress values
+     * @param progress contains
+     */
+    void onDragging(float progress);
 }

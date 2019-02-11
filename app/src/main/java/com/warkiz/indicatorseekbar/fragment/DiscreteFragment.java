@@ -1,6 +1,7 @@
 package com.warkiz.indicatorseekbar.fragment;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -86,6 +87,12 @@ public class DiscreteFragment extends BaseFragment {
                 progress.setText("progress: " + seekBar.getProgress());
                 progress_float.setText("progress_float: " + seekBar.getProgressFloat());
                 from_user.setText("from_user: false");
+            }
+
+            @Override
+            public void onDragging(float progress) {
+                Log.d("sdf", "" + progress);
+
             }
         });
     }
