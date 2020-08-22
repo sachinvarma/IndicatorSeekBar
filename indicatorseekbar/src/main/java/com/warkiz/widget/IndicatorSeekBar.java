@@ -1231,10 +1231,14 @@ public class IndicatorSeekBar extends View {
     }
 
     private void refreshSeekBar(MotionEvent event) {
-        refreshThumbCenterXByProgress(calculateProgress(calculateTouchX(adjustTouchX(event))));
+        float value = calculateProgress(calculateTouchX(adjustTouchX(event)));
+        refreshThumbCenterXByProgress(value);
         setSeekListener(true);
         invalidate();
         updateIndicator();
+        if (mSeekChangeListener != null) {
+            mSeekChangeListener.onDragging(value);
+        }
     }
 
     private boolean progressChange() {

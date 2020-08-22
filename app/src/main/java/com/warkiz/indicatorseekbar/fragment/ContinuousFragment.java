@@ -69,6 +69,11 @@ public class ContinuousFragment extends BaseFragment {
                 progress_float.setText("progress_float: " + seekBar.getProgressFloat());
                 from_user.setText("from_user: false");
             }
+
+            @Override
+            public void onDragging(float progress) {
+                Log.d("sdf", "" + progress);
+            }
         });
     }
 }
